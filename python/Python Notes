@@ -1,0 +1,42 @@
+Python Notes            *Pay attention to the small details on the exam
+
+-Sorted and sort are different
+    - Sort is for lists only, while sorted is for any iterable (including dictionaries).
+    - When sorted is used with a dictionary, the dictionary is sorted by the key values (returns in a list).
+    - sort(reverse = True) does not return a list; however, it does sort the list
+
+    For instance:
+
+    Correct:
+    L = [(1,11),(2,22),(3,33),(4,44)]
+    L2 = sorted([(i,j) for j,i in L],reverse = True)
+
+    >>> print(L2)
+    [(44, 4), (33, 3), (22, 2), (11, 1)]
+
+-Shallow/Deep Copy
+    - Shallow copy occurs when one object is set equal to another object
+    (their memory ids are the same)
+    - Deep copy is a new object with a seperated, different memory id
+    - pay attention to if (in the funciton) a new variable is created or not
+
+-Range
+    -range can go from positive to negative (i.e. 1, -2) as long as the interval is also negative (-1 for instance)
+
+-Class/methods
+    -if class/method is called with out a value for the posititional argument, an error is returned
+
+-Dictionaries
+    -Dictionaries have no set value
+
+-Index
+    -if substring of index is not found, an error is printed ('substring not found')
+
+-Set([iterable])
+    -if object is in paramater, python will iterate over it (| union, ^ symdif)
+
+-Str
+    -str object does not support string assignment (ex. s[1:3] = 'oo')
+
+-if
+    -if x:  #checks to see if x is true or 1

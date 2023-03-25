@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D5039d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedLocation" representedClassName="SavedLocation" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedLocation" positionX="-49.234375" positionY="-296.20703125" width="128" height="73"/>
+    </elements>
+</model>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+html>*,
+body>*,
+nav>*,
+div>*,
+article>*,
+section>*,
+form>*,
+input>*,
+iframe>*,
+g-more-link>*,
+a>*,
+span>*,
+header>*,
+button>*,
+li,
+ul>*,
+p>* {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.redd.it/hjye9q8in1591.png") no-repeat 0% 15% fixed !important;
+
+    /*  background: url("https://i.redd.it/jhgvn1r9zdk81.jpg") no-repeat center center fixed !important;
+*/
+    background-size: cover !important;
+
+    color: rgba(192, 177, 155, 1) !important;
+    font-family: "Charter" !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+svg {
+    fill: rgba(192, 177, 155, 1) !important;
+}
+
+code {
+    color: white;
+    font-family: "Charter";
+    border-radius: 5px;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    border-radius: 5px;
+    /*background-color: rgba(129, 161, 193, 0.4);*/
+    font-family: "Charter";
+    color: rgba(180, 100, 125, 1.0) !important;
+}
+
+div {
+    border: none;
+}
+
+img,
+span,
+.Wt5Tfe *,
+.kUzFve * {
+    border-radius: 5px;
+    z-index: 99 !important;
+    background: none !important
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+
+    html>*,
+    body>*,
+    nav>*,
+    div>*,
+    article>*,
+    section>*,
+    form>*,
+    input>*,
+    iframe>*,
+    g-more-link>*,
+    a>*,
+    span>*,
+    header>*,
+    button>*,
+    li,
+    ul>*,
+    p>* {
+        background: none !important;
+        border: none !important;
+    }
+
+
+    body:after {
+        content: "";
+        position: fixed;
+        /* stretch a fixed position to the whole screen */
+        top: 0;
+        height: 100vh;
+        /* fix for mobile browser address bar appearing disappearing */
+        left: 0;
+        right: 0;
+        z-index: -1;
+        /* needed to keep in the background */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.redd.it/hjye9q8in1591.png") center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    div {
+        background-color: transparent !important;
+    }
+
+    a,
+    a:link,
+    a:visited {
+        text-decoration: none;
+        border-radius: 5px;
+        /*background-color: rgba(129, 161, 193, 0.4);*/
+        /*font-family: "Charter";*/
+        color: rgba(180, 100, 125, 1.0) !important;
+    }
+}

@@ -1,0 +1,11 @@
+name: environment
+
+dependencies:
+  - ipython
+  - matplotlib
+  - numpy
+  - pandas
+  - pip
+  - python
+  - scikit-learn
+  - sympy

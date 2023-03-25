@@ -1,0 +1,101 @@
+/* Responsive Full Background Image Using CSS
+ * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
+*/
+body {
+  /* Location of the image */
+  	background-image: url("macos-mojave.jpg");
+
+  /* Image is centered vertically and horizontally at all times */
+  	background-position: center center;
+
+  /* Image doesn't repeat */
+  	background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+ 	background-attachment: fixed;
+
+  /*This is what makes the background image rescale based on its container's size */
+    background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  	background-color:#464646;
+    margin: 0;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+
+    font-family: 'Open Sans', sans-serif;
+
+    /*padding-bottom: 5000px;*/
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #000000;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #808080;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    color: #808080;
+}
+
+#description {
+	color: white;
+	font-weight: bold;
+	height: auto;
+	width: auto;
+	padding-left: 125px;
+	padding-right: 125px;
+	text-align: center;
+	font-size: 19px;
+}
+
+#apple {
+	padding-top: 200px;
+}
+
+#mojave {
+	font-size: 25px;
+	margin-bottom: -50px;
+}
+
+#power {
+	font-family: 'Open Sans Bold', sans-serif;
+	font-size: 55px;
+	font-weight: 650;
+	margin-bottom: 0px;
+}
+
+p.macOS {
+	text-align: center;
+	color: white;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url("macos-mojave.jpg");
+    }
+	}

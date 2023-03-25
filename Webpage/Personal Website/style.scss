@@ -1,0 +1,325 @@
+$background-color: #404040;
+$div-color: #000000;
+$nav-color: rgba(#161618, 0.70); // #161618 #555556 #212124
+$nav-hover: rgba(#868895, 0.60);
+$font-color: #ffffff;
+$pad: 30px;
+$box-shadow: 0px 3px 3px 1px rgba($nav-color, 0.7);
+$default-width: 50%;
+$keyframe-width: 40%;
+$cursor-color: rgba(240, 240, 240, .75);
+
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }}
+
+a {
+  color: cyan;
+  text-decoration: none;
+}
+
+body {
+    background-color: $background-color;
+    color: $font-color;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@include headings {
+    padding-left: $pad;
+    clear: both;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input[type="text"]{
+  // -webkit-border-radius: 10px;
+  // -moz-border-radius: 10px;
+  // border-radius: 10px;
+  background-color: $div-color;
+  width: 80%;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: normal;
+
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+img {
+  height: 25%;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: $box-shadow;
+}
+
+.center {
+  margin: auto;
+  padding: 20px;
+  width: $default-width;
+}
+
+.menu {
+  list-style-type: none;
+  width: 100%;
+  padding-top: 0px;
+  padding-left: $pad - 15;
+  overflow: hidden;
+  background-color: $nav-color;
+  box-shadow: $box-shadow;
+  margin: 0;
+  margin-bottom: 1.5%;
+}
+
+.nav-bar {
+  float: left;
+}
+
+.nav-bar a {
+  display: block;
+  color: $font-color;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.nav-bar a:hover {
+  color: $nav-hover;
+}
+
+#about {
+    width: 40%;
+    float: left;
+    padding-left: $pad;
+}
+
+/*https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/*/
+#code-intro {
+  border-right: solid 3px $cursor-color;
+  animation: animated-text 1s steps(13,end) 1.5s 1 normal both,
+             animated-cursor 1.5s steps(13,end) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* text animation */
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: $keyframe-width;}
+}
+
+/* cursor animations */
+@keyframes animated-cursor{
+  from{border-right-color: $cursor-color;} // rgba(0,255,0,.75)
+  to{border-right-color: transparent;}
+}
+
+#download {
+  padding-left: $pad;
+}
+
+#hobbies {
+  clear: both;
+  padding-bottom: 5%;
+}
+
+#h1-background {
+  position: relative;
+  display: block;
+  color: #2d9fd9;
+  font-weight: bold;
+  margin: auto;
+  background-color: $div-color;
+  width: $default-width - 10%;
+  border-radius: 20px;
+}
+
+#h1-display {
+  position: relative;
+  display: block;
+  background-color: $div-color;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 1.0);
+  border: 1px solid $div-color;
+  color: #2d9fd9;
+  font-weight: bold;
+  margin: auto;
+}
+
+#h1-display::before {
+  content: '>>>';
+  position: absolute;
+  top: calc($default-width - 14px);
+  left: 25px;
+  z-index: 99;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#h1-wrap {
+  width: 80%;
+  margin: auto;
+}
+
+#portrait {
+  width: $default-width;
+  margin-right: 3%;
+}
+
+#resume {
+  scrolling: no;
+  width: $default-width;
+  height: 1000px;
+  padding-left: $pad;
+  padding-bottom: $pad;
+  float: left;
+}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  h2 {
+    padding: 0;
+    text-align: center;
+  }
+
+  .menu {
+    margin-bottom: 5%;
+  }
+
+  #about {
+    width: 90%;
+    margin: 0 auto;
+    // padding: 0;
+    text-align: center;
+    display: block;
+
+  }
+
+  #h1-background {
+    position: relative;
+    display: block;
+    color: #2d9fd9;
+    font-weight: bold;
+    margin: auto;
+    background-color: $div-color;
+    height: 8%;
+    width: $default-width + 30%;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #h1-wrap {
+    width: 70%;
+    margin: auto;
+  }
+
+    /* text animation */
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: $keyframe-width * 2.5;}
+  }
+
+  #portrait {
+    width: 80%;
+    padding: 0;
+    margin: 10%;
+  }
+
+  #resume {
+    scrolling: no;
+    width: 90%;
+    height: 1000px;
+    padding-left: $pad;
+    padding-bottom: $pad;
+    // border-radius: 5px;
+  }
+}
+ 
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+  // img {
+  //   border-radius: 5px;
+  //   object-fit: cover;
+  //   box-shadow: $box-shadow;
+  // }
+
+  #about {
+    width: 80%;
+    float: left;
+    padding-left: $pad;
+  }
+
+  #portrait {
+    float: right;
+    height: 100%;
+  }
+}
+ 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+  // img {
+  //   border-radius: 5px;
+  //   object-fit: cover;
+  //   box-shadow: $box-shadow;
+  // }
+
+  #about {
+    width: 40%;
+    float: left;
+    padding-left: $pad;
+  }
+
+  #portrait {
+    float: right;
+    width: $default-width;
+  }
+}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  img {
+    border-radius: 5px;
+    // object-fit: cover;
+    box-shadow: $box-shadow;
+  }
+
+  #about {
+    width: 40%;
+    float: left;
+    padding-left: $pad;
+  }
+
+  #portrait {
+    float: right;
+    width: $default-width;
+  }
+}
+
